@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color:#fefe80;
+    --text-color:#333;
+    --button-add:#bffe80;
+    --button-add-dark:#80fe80;
+    --button-remove:#f84c62;
+    --list-background:#d9d9d3;
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
