@@ -1,0 +1,17 @@
+.logoContainer{
+    margin : 1.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+
+}
+
+.logoContainer >h1 {
+    font-size: 5.8rem;
+    font-family: 'Freckle Face', cursive;
+}
+.logoContainer > img {
+    width: 15rem;
+    margin:1.5rem;
+}
