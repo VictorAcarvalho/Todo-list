@@ -1,0 +1,12 @@
+.taskList{
+    background: var(--list-background); 
+    width: 35rem;
+    
+}
+.taskList li{
+    list-style: none;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.5rem;
+    margin-left: 0.8rem;
+    text-align: center;
+}
