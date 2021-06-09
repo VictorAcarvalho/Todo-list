@@ -34,6 +34,9 @@
 }
 
 .taskButton{
+    position: relative;
+    overflow: hidden;
+    transition-duration:0.4s;
     width: 6.5rem;
     border-radius: 0.8rem;
     border:none;
@@ -53,6 +56,22 @@
     transition: 0.5s;
     border:1px solid;
     border-color: black
+}
+.taskButton::after{
+    background-color: var(--background-color);
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px;
+    margin-top:-120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+.taskButton:active::after{
+    padding: 0;
+    margin:0;
+    opacity: 1;
+    transition: 0s;
 }
 .checkTask{
     border: 1px;

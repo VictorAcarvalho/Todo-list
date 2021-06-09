@@ -4,19 +4,29 @@ import style from "../styles/components/TaskList.module.css";
 export function TaskList() {
   const [task, setTask] = useState("");
   const [taskList, setTaskList] = useState([]);
-  const[cssCheck,setCssChek]=useState("");
+  const [completedTask,setCompletedTask] =useState(taskList.length)
+  
 
   function addTask(event) {
     event.preventDefault();
     if (task) {
       setTaskList([...taskList, task]);
       setTask("");
+      setCompletedTask(completedTask+1)
     }
   };
+
 
   function handleInputTask(event) {
     let inputTask = event.target.value;
     setTask(inputTask);
+  };
+
+
+  function handleCompletedTask(event){
+   event.preventDefault()
+    setCompletedTask(completedTask -1);
+          
   };
 
   return (
@@ -33,10 +43,10 @@ export function TaskList() {
         </button>
       </form>
       <ul>
+        <p>Faltam {completedTask} de {taskList.length} tarefas</p>
         {taskList.map((task) => (
-          <li>
+          <li onClick={handleCompletedTask}>
             {task}
-            <input type="checkbox" className={style.checkTask} />
           </li>
         ))}
       </ul>
